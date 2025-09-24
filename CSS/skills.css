@@ -1,0 +1,168 @@
+  html,
+  body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      /* overflow: hidden; */
+      /* 🔥 Disable scrolling completely */
+  }
+
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: white;
+      background-image: url(Image/background.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+  }
+
+  /* Top Bar Styling */
+  .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #00000000;
+      color: white;
+      padding: 20px 20px;
+      padding-bottom: 0px;
+  }
+
+  .top-bar nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 1.3rem;
+  }
+
+  .top-bar nav a:hover {
+      text-decoration: underline;
+  }
+
+  .top-bar nav a.active:hover {
+      text-decoration: none;
+  }
+
+  .top-bar nav a.active {
+      color: rgba(241, 54, 54, 0.76);
+      /* Different text color */
+      font-weight: bold;
+      /* Make it stand out */
+      border-bottom: 2px solid rgba(241, 54, 54, 0.76);
+      /* Optional underline */
+  }
+
+  .top-bar .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(119, 194, 255);
+      padding: 20px;
+      padding-left: 60px;
+  }
+
+
+
+  main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      height: 100vh;
+      /* 👈 Full screen height */
+      width: 100%;
+      /* Full width */
+      padding: 0 50px;
+      /* ✅ Only left/right padding (no vertical padding) */
+      box-sizing: border-box;
+  }
+
+  /* Text styling */
+  .text-content {
+      text-align: left;
+  }
+
+  .text-content h1 {
+      font-size: 2rem;
+      margin: 0;
+  }
+
+  .text-content p {
+      text-align: justify;
+      font-size: 1.2rem;
+      color: #d8d8d8;
+      width: 75%;
+  }
+
+
+
+
+  /* Card Rack Section */
+  .skills-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+  }
+
+  .skills-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+  }
+
+  .card-rack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+  }
+
+  .skill-card {
+      background: rgb(112, 110, 110);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .skill-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+  }
+
+  .skill-card h3 {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+  }
+
+
+
+
+
+  /* Make it responsive */
+  @media (max-width: 600px) {
+      .top-bar {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .top-bar nav {
+          margin-top: 10px;
+      }
+
+      main {
+          flex-direction: column;
+          /* Stack vertically on small screens */
+          text-align: center;
+      }
+  }
